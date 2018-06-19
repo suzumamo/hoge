@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    @users = User.all.order(created_at: "desc") # created_atが新しい順(desc)で出力するように
     # @microposts = Micropost.all
   end
 
